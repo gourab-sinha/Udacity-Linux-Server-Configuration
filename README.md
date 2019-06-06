@@ -299,4 +299,4 @@ B. If packages or modules are not available then
 
 ### Note
   * Facebook OAuth won't work as Facebook only allow https sites.
-  
+  * If you are trying to login with google sign and having adress as IP address, it will show you an error as google oauth doesn't allow any ip adress in authorized redirects hence it won't work.
