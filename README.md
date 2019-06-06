@@ -277,10 +277,26 @@ The goal of this project is to host a web application either Item Catalog projec
   * Use sudo nano on clients_secrets.json in the catalog directory and delete its previous content. Paste the copied contents here. Save and exit.
   * In your templates folder, sudo nano into login.html and replace the previous client_ID with the new ID.
   * In ```__init__.py``` reset location for the clients_secrets file to ```/var/www/catalog/catalog/client_secrets.json```
-9. Final Setup and populate database:
+### Final Setup and populate database:
   * Goto ```cd /var/www/catalog/catalog``` and run ```. venv/bin/activate```
   * Populate the db: ```python3 lotsofmenus.py```
   * Deactivate .venv3
   * Restart apache service: ```sudo service apache2 restart```
   * Now you can access fully working web application through these links http://13.234.250.106 or http://ec2-13-234-250-106.ap-south-1.compute.amazonaws.com/
+  
+### References
+  * Udacity Knowledge Portal
+  * Stackoverflow
+  * DigitalOcean
+### Troubleshoot
+A. If shared folder is not visiable, run vagrant reload on gitbash terminal/cmd
+
+B. If packages or modules are not available then 
+1. sudo apt-get -qqy install python3 python3-pip
+2. sudo -H pip3 install --upgrade pip
+3. sudo -H pip3 install flask packaging oauth2client flask-httpauth
+4. sudo -H pip3 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests
+
+### Note
+  * Facebook OAuth won't work as Facebook only allow https sites.
   
